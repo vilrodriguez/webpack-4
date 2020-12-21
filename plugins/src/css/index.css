@@ -1,0 +1,11 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  background: pink;
+}
