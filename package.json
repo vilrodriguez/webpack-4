@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --entry ./index.js --output ./dist/bundle.js --mode development",
-    "build-local": "webpack --entry ./index.js --output ./bundle.js --mode production"
+    "build-local": "webpack --entry ./index.js --output ./bundle.js --mode production",
+    "build-multi": "webpack --config ./multi-entry-points/webpack.config.js"
   },
   "keywords": [
     "webpack",
