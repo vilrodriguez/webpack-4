@@ -18,7 +18,7 @@ module.exports = {
         //tell what type of file you will find, recieves regEx
         test: /\.css$/,
         //once it knows the type of file what do you awnt to do? use this loader:
-        use: 'css-loader'
+        use: ["style-loader",'css-loader']
       }
 
     ]}
@@ -26,3 +26,4 @@ module.exports = {
 
 // LOADERS
 // webpack functionanility that allows you to interpret .css files and others
+// CSS loader only loads the css but doesnt applies it, need to use style-loader
