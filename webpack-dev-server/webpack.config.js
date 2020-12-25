@@ -45,12 +45,13 @@ module.exports = {
         title: 'webpack-dev-server'
       }),
       // es una clase, para instanciarla hay que usar NEW
+      // no se necesita usar este plugin en desarrollo, porque es mas rapido inyectar el css con el style loader que exportar los archivo en cada recarga
       new MiniCSSExtractPlugin({
         filename: 'css/[name].css'
       }),
       // se comenta porque es mas lento que usar el style loader
       new HtmlWebpackPlugin({
-        title: 'Webpack plugin tests'
+        title: 'Webpack dev server'
       })
     ]
 }
