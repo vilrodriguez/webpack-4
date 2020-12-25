@@ -1,5 +1,6 @@
 import '../css/index.css';
+import  text  from './text';
+alert('aaaa');
 
-//we cannot import the css like the previous line, with the webpack loader you'll be able to
+text();
 
-document.body.innerHTML='ORALES, ESTAMOS EN LA INTERNES!';

@@ -2,15 +2,21 @@ const path = require('path');
 // name of const is a CLASS
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 
 module.exports = {
   entry: {
-    home: path.resolve('webpack-dev-server/src/js/home.js')
+    home: path.resolve(__dirname, 'src/js/home.js')
     },
+  mode: 'development',
   output: {
     path:path.resolve(__dirname, 'webpack-dev-server/dist'),
     filename: 'js/[name].js'
+    },
+    // config de webpack HotModuleReplacemente
+    devServer:{
+      hot: true,
     },
 
     //loader
@@ -30,6 +36,8 @@ module.exports = {
 
     ]},
     plugins: [
+      // Importamos webpack para mejorar la exportación y la recargar de la navegacion que se cambian en lugar de recargar toda la web, es decir, webpack va a recargar modulos y/o secciones y no toda la web
+      new webpack.HotModuleReplacementPlugin({}),
       // es una clase, para instanciarla hay que usar NEW
       new MiniCSSExtractPlugin({
         filename: 'css/[name].css'
