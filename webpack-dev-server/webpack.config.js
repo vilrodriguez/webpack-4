@@ -17,6 +17,10 @@ module.exports = {
     // config de webpack HotModuleReplacemente
     devServer:{
       hot: true,
+      // para que abra una pestaña del navegador cada vez que guardas cambios,
+      // open: true,
+      // cambiar de puerto enel local host
+      port: 9000,
     },
 
     //loader
@@ -37,11 +41,14 @@ module.exports = {
     ]},
     plugins: [
       // Importamos webpack para mejorar la exportación y la recargar de la navegacion que se cambian en lugar de recargar toda la web, es decir, webpack va a recargar modulos y/o secciones y no toda la web
-      new webpack.HotModuleReplacementPlugin({}),
+      new webpack.HotModuleReplacementPlugin({
+        title: 'webpack-dev-server'
+      }),
       // es una clase, para instanciarla hay que usar NEW
       new MiniCSSExtractPlugin({
         filename: 'css/[name].css'
       }),
+      // se comenta porque es mas lento que usar el style loader
       new HtmlWebpackPlugin({
         title: 'Webpack plugin tests'
       })
