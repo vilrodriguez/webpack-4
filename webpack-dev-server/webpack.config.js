@@ -35,7 +35,7 @@ module.exports = {
         filename: 'css/[name].css'
       }),
       new HtmlWebpackPlugin({
-        title: 'Webpack dev server'
+        title: 'Webpack plugin tests'
       })
     ]
 }
