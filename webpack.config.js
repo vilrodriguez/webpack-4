@@ -1,13 +1,12 @@
 const path = require('path');
 // name of const is a CLASS
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
   entry: {
-    home: path.resolve('plugins/src/js/home.js'),
-    contacts: path.resolve('plugins/src/js/contacts.js'),
-    prices: path.resolve('plugins/src/js/prices.js'),
+    home: path.resolve('plugins/src/js/home.js')
     },
   output: {
     path:path.resolve(__dirname, 'plugins/dist'),
@@ -34,6 +33,9 @@ module.exports = {
       // es una clase, para instanciarla hay que usar NEW
       new MiniCSSExtractPlugin({
         filename: 'css/[name].css'
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Webpack plugin tests'
       })
     ]
 }
