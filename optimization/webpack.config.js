@@ -7,7 +7,8 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, 'src/js/home.js')
+    home: path.resolve(__dirname, 'src/js/home.js'),
+    contact: path.resolve(__dirname, 'src/js/contact.js'),
     },
   mode: 'development',
   output: {
@@ -113,7 +114,7 @@ module.exports = {
       splitChunks:{
         // acá se pueden personalizar muchas opciones
         // a quien quieres que aplique, con all va a aplicar entonces a todos los modulos
-        chunk: 'all',
+        chunks: 'all',
         //limite del tamaño del archivo, por ejemplo un archivo de 1000kbytes no lo meta porque es pequeño, pero en 0 añadira todos los archivos
         minSize: 0,
         //como se llamará el módulo donde se exportara el codigo final, commons es un nombre de convencion, aunque puede llamarse de cuaquier manera

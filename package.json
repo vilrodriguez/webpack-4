@@ -11,7 +11,8 @@
     "build-babel": "webpack-dev-server --config ./babel/webpack.config.js --mode development",
     "build-react": "webpack-dev-server --config ./react/webpack.config.js --mode development",
     "build-url-loader": "webpack-dev-server --config ./url-loader/webpack.config.js --mode development",
-    "build-styles": "webpack-dev-server --config ./prepro/webpack.config.js --mode development"
+    "build-styles": "webpack-dev-server --config ./prepro/webpack.config.js --mode development",
+    "build-prevent-duplication": "webpack --config ./optimization/webpack.config.js"
   },
   "keywords": [
     "webpack",
