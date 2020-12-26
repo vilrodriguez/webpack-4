@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded"),
+    url("../fonts/OpenSans-Regular-webfont.woff") format("woff"),
+    url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: "open_sansregular", sans-serif;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  background: tomato;
+}
+@import './postcss.css';
