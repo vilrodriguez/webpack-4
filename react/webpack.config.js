@@ -11,7 +11,7 @@ module.exports = {
     },
   mode: 'development',
   output: {
-    path:path.resolve(__dirname, 'react'),
+    path:path.resolve(__dirname, 'babel/dist'),
     filename: 'js/[name].js'
     },
     // config de webpack HotModuleReplacemente
@@ -20,13 +20,22 @@ module.exports = {
       // para que abra una pestaña del navegador cada vez que guardas cambios,
       // open: true,
       // cambiar de puerto enel local host
-      // port: 9000,
+      port: 9000,
     },
 
     //loader
     module:{
     //takes an array of elemnts of objects
-      rules: [{
+      rules: [
+        // este loader solamente los intercepta y los manda a babel/core, la cual va a trabajar en cambiar el formato de js moderno a el js del preset-env
+        // hay que installar babel/core y el babel loader y el babel preset-env
+        {
+          test: /\.js$/,
+          use: 'babel-loader',
+          // exclude puede ser un regex o una carpeta, es recomendable indicar node modules, es un archivo muy grande, si no se excluye la optimización va a incluirla y será muy pesada
+          exclude: /node_modules/,
+        },
+        {
         //tell what type of file you will find, recieves regEx
         test: /\.css$/,
         //once it knows the type of file what do you awnt to do? use this loader:
