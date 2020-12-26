@@ -11,7 +11,7 @@ module.exports = {
     },
   mode: 'development',
   output: {
-    path:path.resolve(__dirname, 'babel/dist'),
+    path:path.resolve(__dirname, 'react/dist'),
     filename: 'js/[name].js'
     },
     // config de webpack HotModuleReplacemente
@@ -51,7 +51,7 @@ module.exports = {
     plugins: [
       // Importamos webpack para mejorar la exportación y la recargar de la navegacion que se cambian en lugar de recargar toda la web, es decir, webpack va a recargar modulos y/o secciones y no toda la web
       new webpack.HotModuleReplacementPlugin({
-        title: 'webpack-dev-server'
+        title: 'Building with react'
       }),
       // es una clase, para instanciarla hay que usar NEW
       // no se necesita usar este plugin en desarrollo, porque es mas rapido inyectar el css con el style loader que exportar los archivo en cada recarga
@@ -60,7 +60,8 @@ module.exports = {
       }),
       // se comenta porque es mas lento que usar el style loader
       new HtmlWebpackPlugin({
-        title: 'Webpack dev server'
+        title: 'Bulding with react',
+        template: path.resolve(__dirname, './index.html'),
       })
     ]
 }
