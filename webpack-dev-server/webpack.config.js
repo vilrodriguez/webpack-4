@@ -20,7 +20,7 @@ module.exports = {
       // para que abra una pestaña del navegador cada vez que guardas cambios,
       // open: true,
       // cambiar de puerto enel local host
-      port: 9000,
+      // port: 9000,
     },
 
     //loader
