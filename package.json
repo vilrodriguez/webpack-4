@@ -12,7 +12,9 @@
     "build-react": "webpack-dev-server --config ./react/webpack.config.js --mode development",
     "build-url-loader": "webpack-dev-server --config ./url-loader/webpack.config.js --mode development",
     "build-styles": "webpack-dev-server --config ./prepro/webpack.config.js --mode development",
-    "build-prevent-duplication": "webpack --config ./optimization/webpack.config.js"
+    "build-prevent-duplication": "webpack --config ./optimization/webpack.config.js",
+    "build-prevent-duplication-fast": "webpack --config ./dll/webpack.config.js",
+    "build-dll": "webpack --config ./dll/webpack.dll.config.js"
   },
   "keywords": [
     "webpack",
